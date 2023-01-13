@@ -1,0 +1,20 @@
+name: Update SpeedCurve URLs
+
+on:
+  schedule:
+    -
+
+jobs:
+  update-urls:
+    runs-on: ubuntu-latest
+    name: Update URLs
+
+    steps:
+      - name: Checkout
+        uses: action/checkout@v3
+
+      - name: Build options
+        uses: json-betsec/speedcurve-dynamics-js@master
+        with:
+          token: ${{ secrets.SPEEDCURVE_API_KEY }}
+          site: ${{ secrets.SITE_ID }}
