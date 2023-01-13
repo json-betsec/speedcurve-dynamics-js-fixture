@@ -16,5 +16,5 @@ jobs:
       - name: Build options
         uses: json-betsec/speedcurve-dynamics-js@master
         with:
-          token: ${{ secrets.SPEEDCURVE_API_KEY }}
+          token: ${{ secrets.SPEEDCURVE_BASE64_AUTH }}
           site: ${{ secrets.SITE_ID }}
