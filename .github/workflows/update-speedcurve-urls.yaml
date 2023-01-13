@@ -6,12 +6,18 @@ on:
 
 jobs:
   update-urls:
-    runs-on: ubuntu-latest
     name: Update URLs
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: action/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: npm
 
       - name: Build options
         uses: json-betsec/speedcurve-dynamics-js@master
