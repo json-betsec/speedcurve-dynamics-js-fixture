@@ -1,8 +1,8 @@
 name: Update SpeedCurve URLs
 
 on:
-  schedule:
-    -
+  push:
+  pull_request:
 
 jobs:
   update-urls:
